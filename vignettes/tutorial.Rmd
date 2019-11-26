@@ -41,7 +41,9 @@ res_plot(res_linear$residual, res_linear$fit)
 
 #### compare with R function
 ### correctness
-all.equal(lm(y~x-1)$coef,res_linear$beta)
+v1=lm(y~x-1)$coef
+v2=res_linear$beta
+all.equal(unname(v1),as.numeric(v2))
 
 
 
