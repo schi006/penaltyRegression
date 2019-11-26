@@ -15,6 +15,12 @@
 
 3.lasso_fit: fit lasso regression and return beta, fitted value, residual
 
+4.reg_plot: y-x scatter plot
+
+5.res_plot: residual plot
+
+6.reg_predct: predited y
+
 ## Example
 
 library(penaltyRegression)
