@@ -18,5 +18,10 @@ scatter plot
 This function aims to create residual-fitted scatter plot.
 }
 \examples{
-
+set.seed(0)
+library(penaltyRegression)
+x <- matrix(runif(50), ncol = 1)
+y <- matrix(2*x[,1] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
+res_linear = linear_fit(x,y) #fit linear regression
+res_plot(res_linear$residual, res_linear$fit) #residual plot
 }
