@@ -64,10 +64,10 @@ res_plot(res_ridge$residual, res_ridge$fit)
 #### compare with R function
 require(MASS)
 require(glmnet)
-lm.ridge(y~x-1, Inter = FALSE, lambda=lambda)
-glmnet(x, y, alpha = 0, lambda = lambda, intercept = FALSE)$beta
-
-
+v2=lm.ridge(y~x-1, Inter = FALSE, lambda=lambda)$coef
+v3=glmnet(x, y, alpha = 0, lambda = lambda, intercept = FALSE)$beta
+v1=res_ridge$beta
+all.equal(as.numeric(v2),as.numeric(v1),as.numeric(v3))
 
 ### lasso regression
 
