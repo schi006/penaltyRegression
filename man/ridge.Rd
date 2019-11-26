@@ -18,7 +18,7 @@ estimated beta with L2 regularization
 }
 \description{
 This function estimates ridge regression model.
-Ridge has explicit form equation.
+Ridge has explicit form equation
 }
 \examples{
 
@@ -35,8 +35,10 @@ res_ridge$residual
 reg_plot(x, y, res_ridge$beta)
 res_plot(res_ridge$residual, res_ridge$fit)
 
-require(MASS)
-require(glmnet)
+if(require(MASS)){
 lm.ridge(y~x-1, Inter = FALSE, lambda=lambda)
+}
+if(require(glmnet)){
 glmnet(x, y, alpha = 0, lambda = lambda, intercept = FALSE)$beta
+}
 }

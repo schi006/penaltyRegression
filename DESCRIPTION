@@ -5,8 +5,8 @@ Version: 1.0
 Date: 2019-11-25
 Author: Sunyi Chi
 Maintainer: Sunyi Chi <sunyichi@umich.edu>
-Description: This R package is used for fitting and analysising linear regression, ridge regression and lasso
-License: MIT
+Description: This R package is used for fitting and analysis linear regression, ridge regression and lasso.
+License: MIT + file LICENSE
 Imports: Rcpp (>= 1.0.2), ggplot2,glmnet
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.1

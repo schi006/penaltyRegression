@@ -4,7 +4,7 @@
 \alias{lasso_fit}
 \title{lasso}
 \usage{
-lasso_fit(x, y, lambda, tol = 1e-07, max_iter = 10000)
+lasso_fit(x, y, lambda = 1, tol = 1e-07, max_iter = 10000)
 }
 \arguments{
 \item{x}{input independent data matrix - nxp}
@@ -30,12 +30,13 @@ library(penaltyRegression)
 set.seed(0)
 x <- matrix(runif(100), ncol = 2)
 y <- matrix(2*x[,1] + 3*x[,2] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
-lambda=1
-res_lasso = lasso_fit(x, y, lambda=lambda, tol = 1e-10,max_iter = 10000)
+
+res_lasso = lasso_fit(x, y, lambda=1, tol = 1e-10,max_iter = 10000)
 res_lasso$beta
 res_lasso$fit
 res_lasso$residual
 
-require(glmnet)
-glmnet(x, y, alpha = 1, lambda = lambda, intercept = FALSE)$beta
+if(require(glmnet)){
+glmnet(x, y, alpha = 1, lambda = 1, intercept = FALSE)$beta
+}
 }
