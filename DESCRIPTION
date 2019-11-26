@@ -1,15 +1,20 @@
 Package: penaltyRegression
 Type: Package
-Title: What the package does (short line)
+Title: penaltyRegression
 Version: 1.0
 Date: 2019-11-25
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Author: Sunyi Chi
+Maintainer: Sunyi Chi <sunyichi@umich.edu>
+Description: This R package is used for fitting and analysising linear regression, ridge regression and lasso
 License: MIT
 Imports: Rcpp (>= 1.0.2), ggplot2,glmnet
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.1
 Encoding: UTF-8
-Suggests: knitr, rmarkdown , MASS
+Suggests: 
+    knitr,
+    rmarkdown,
+    MASS,
+    testthat,
+    covr
 VignetteBuilder: knitr
