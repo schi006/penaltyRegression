@@ -19,33 +19,50 @@
 
 library(penaltyRegression)
 
-###linear regression
+### linear regression
 
 #### simulate data
 set.seed(0)
+
 x <- matrix(runif(50), ncol = 1)
+
 y <- matrix(2*x[,1] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
+
 res_linear = linear_fit(x,y)
+
 res_linear$beta
+
 res_linear$fit
+
 res_linear$residual
+
 reg_plot(x, y, res_linear$beta)
+
 res_plot(res_linear$residual, res_linear$fit)
 
 
 
-###ridge regression
+### ridge regression
 
 #### simulate data
 set.seed(0)
+
 x <- matrix(runif(100), ncol = 2)
+
 y <- matrix(2*x[,1] + 3*x[,2] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
+
 lambda=0.001
+
 res_ridge = ridge_fit(x,y,lambda)
+
 res_ridge$beta
+
 res_ridge$fit
+
 res_ridge$residual
+
 reg_plot(x, y, res_ridge$beta)
+
 res_plot(res_ridge$residual, res_ridge$fit)
 
 
@@ -55,12 +72,17 @@ res_plot(res_ridge$residual, res_ridge$fit)
 
 #### simulate data
 set.seed(0)
+
 x <- matrix(runif(100), ncol = 2)
+
 y <- matrix(2*x[,1] + 3*x[,2] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
 
 res_lasso = lasso_fit(x, y, lambda=lambda, tol = 1e-10,max_iter = 10000)
+
 res_lasso$beta
+
 res_lasso$fit
+
 res_lasso$residual
 
 
