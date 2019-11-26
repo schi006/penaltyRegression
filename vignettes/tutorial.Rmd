@@ -67,7 +67,7 @@ require(glmnet)
 v2=lm.ridge(y~x-1, Inter = FALSE, lambda=lambda)$coef
 v3=glmnet(x, y, alpha = 0, lambda = lambda, intercept = FALSE)$beta
 v1=res_ridge$beta
-all.equal(as.numeric(v2),as.numeric(v1),as.numeric(v3))
+all.equal(as.numeric(v1),as.numeric(v2),as.numeric(v3))
 
 ### lasso regression
 
@@ -83,8 +83,8 @@ res_lasso$residual
 
 #### compare with R function
 require(glmnet)
-glmnet(x, y, alpha = 1, lambda = lambda, intercept = FALSE)$beta
-
-
+v2=glmnet(x, y, alpha = 1, lambda = lambda, intercept = FALSE)$beta
+v1=res_lasso$beta
+all.equal(as.numeric(v1),as.numeric(v2),tolerance=1e-3) #might have slightly difference due to different tolerance and maximum iteration setting in two function
 ```
 
