@@ -9,8 +9,10 @@
 ## Overview
 `penaltyRegression` implements linear regression, ridge regression and lasso in c++ using Armadillo.
 
-1.linear_fit: fit linear regression and return beta, fitted value, residual \\
-2.ridge_fit: fit ridge regression and return beta, fitted value, residual \\
+1.linear_fit: fit linear regression and return beta, fitted value, residual 
+
+2.ridge_fit: fit ridge regression and return beta, fitted value, residual 
+
 3.lasso_fit: fit lasso regression and return beta, fitted value, residual
 
 ## Example
