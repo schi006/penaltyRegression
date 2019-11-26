@@ -36,12 +36,11 @@ reg_predict = function (x, beta) {
 #' @export
 
 reg_plot = function(x, y, beta){
-  require(ggplot2)
   df = data.frame(x=x[,1], y=y)
-  p = ggplot(df, aes(x, y))+
-    geom_point(color='black', size=1) +
-    geom_abline(intercept = 0, slope = beta[1], color = 'red', size=1.5) +
-    theme_bw()
+  p = ggplot2::ggplot(df, aes(x, y))+
+    ggplot2::geom_point(color='black', size=1) +
+    ggplot2::geom_abline(intercept = 0, slope = beta[1], color = 'red', size=1.5) +
+    ggplot2::theme_bw()
   p
 }
 
@@ -61,11 +60,10 @@ reg_plot = function(x, y, beta){
 #' @export
 
 res_plot = function(residual, fitted){
-  require(ggplot2)
   df = data.frame(residual=residual, fitted=fitted)
-  p = ggplot(df, aes(fitted, residual))+
-    geom_point(color='black', size=1) +
-    geom_hline(yintercept = 0, color = 'red', size=1.5) +
-    theme_bw()
+  p = ggplot2::ggplot(df, aes(fitted, residual))+
+    ggplot2::geom_point(color='black', size=1) +
+    ggplot2::geom_hline(yintercept = 0, color = 'red', size=1.5) +
+    ggplot2::theme_bw()
   p
 }
