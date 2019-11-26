@@ -16,6 +16,9 @@ knitr::opts_chunk$set(
 
 # penaltyRegression
 
+## Installation
+devtools::install_github("schi006/penaltyRegression")
+
 ## Overview
 `penaltyRegression` implements linear regression, ridge regression and lasso in c++ using Armadillo.
 1.linear_fit: fit linear regression and return beta, fitted value, residual
