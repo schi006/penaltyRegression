@@ -12,7 +12,7 @@ reg_predict(x, beta)
 \item{beta}{input coefficients - p}
 }
 \value{
-estimated beta with L1 regularization
+predicted value
 }
 \description{
 This function aims to predict linear model, OLS / L2 / L1 regularization

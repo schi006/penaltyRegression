@@ -30,7 +30,7 @@ library(penaltyRegression)
 set.seed(0)
 x <- matrix(runif(100), ncol = 2)
 y <- matrix(2*x[,1] + 3*x[,2] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
-
+lambda=1
 res_lasso = lasso_fit(x, y, lambda=lambda, tol = 1e-10,max_iter = 10000)
 res_lasso$beta
 res_lasso$fit

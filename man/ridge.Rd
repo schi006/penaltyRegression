@@ -18,7 +18,7 @@ estimated beta with L2 regularization
 }
 \description{
 This function estimates ridge regression model.
-Ridge has explicit form equation
+Ridge has explicit form equation.
 }
 \examples{
 

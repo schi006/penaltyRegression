@@ -12,7 +12,7 @@ linear_fit(x, y)
 \item{y}{input dependent vector - nx1}
 }
 \value{
-estimated beta
+estimated beta, fitted value, residual
 }
 \description{
 This function estimates linear regression model with OLS.

@@ -6,8 +6,10 @@ Date: 2019-11-25
 Author: Who wrote it
 Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: More about what it does (maybe more than one line)
-License: What license is it under?
-Imports: Rcpp (>= 1.0.2)
+License: MIT
+Imports: Rcpp (>= 1.0.2), ggplot2,glmnet
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.1
 Encoding: UTF-8
+Suggests: knitr, rmarkdown , MASS
+VignetteBuilder: knitr
