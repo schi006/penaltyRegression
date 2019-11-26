@@ -5,7 +5,8 @@
   <!-- badges: start -->
   [![Codecov test coverage](https://codecov.io/gh/schi006/penaltyRegression/branch/master/graph/badge.svg)](https://codecov.io/gh/schi006/penaltyRegression?branch=master)
   <!-- badges: end -->
-  
+## Installation
+devtools::install_github("schi006/penaltyRegression")
 ## Overview
 `penaltyRegression` implements linear regression, ridge regression and lasso in c++ using Armadillo.
 
