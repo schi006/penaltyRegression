@@ -28,19 +28,33 @@ x <- matrix(runif(50), ncol = 1)
 
 y <- matrix(2*x[,1] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
 #fit linear regression
+
 res_linear = linear_fit(x,y)
+
 #coefficients
+
 res_linear$beta
+
 #fitted value
+
 res_linear$fit
+
 #residuals
+
 res_linear$residual
+
 #y-x scatter plot
+
 reg_plot(x, y, res_linear$beta)
+
 #residual plot
+
 res_plot(res_linear$residual, res_linear$fit)
+
 #predited y
+
 beta=res_linear$beta
+
 reg_predict(x, beta)
 
 
@@ -54,20 +68,35 @@ x <- matrix(runif(100), ncol = 2)
 y <- matrix(2*x[,1] + 3*x[,2] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
 
 lambda=0.001
+
 #fit ridge regression
+
 res_ridge = ridge_fit(x,y,lambda)
+
 #coefficients
+
 res_ridge$beta
+
 #fitted value
+
 res_ridge$fit
+
 #residuals
+
 res_ridge$residual
+
 #y-x scatter plot
+
 reg_plot(x, y, res_ridge$beta)
+
 #residual plot
+
 res_plot(res_ridge$residual, res_ridge$fit)
+
 #predited y
+
 beta=res_ridge$beta
+
 reg_predict(x, beta)
 
 
@@ -80,13 +109,21 @@ set.seed(0)
 x <- matrix(runif(100), ncol = 2)
 
 y <- matrix(2*x[,1] + 3*x[,2] + rnorm(50,mean = 0, sd=0.1), ncol = 1)
+
 #fit lasso
+
 res_lasso = lasso_fit(x, y, lambda=lambda, tol = 1e-10,max_iter = 10000)
+
 #coefficients
+
 res_lasso$beta
+
 #fitted value
+
 res_lasso$fit
+
 #residuals
+
 res_lasso$residual
 
 
