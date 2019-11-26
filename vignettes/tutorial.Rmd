@@ -21,6 +21,9 @@ knitr::opts_chunk$set(
 1.linear_fit: fit linear regression and return beta, fitted value, residual
 2.ridge_fit: fit ridge regression and return beta, fitted value, residual
 3.lasso_fit: fit lasso regression and return beta, fitted value, residual
+4.reg_plot: y-x scatter plot
+5.res_plot: residual plot
+6.reg_predct: predited y
 
 ## Example
 ```{r}
